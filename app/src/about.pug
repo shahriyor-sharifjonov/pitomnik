@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="fonts/stylesheet.css")
+        link(rel="stylesheet" href="styles/index.css")
+    body 
+        .wrapper
+            include components/header.pug 
+            +header
+            main.mainmain.mainmain.main
+                .breadcrumb.container
+                    a(href="index.html").breadcrumb-item Главная
+                    .breadcrumb-dot 
+                    a(href="#!").breadcrumb-item.active О нас
+                .new.about 
+                    .about__body.container
+                        .about__content
+                            h2.about__title.title О нас 
+                            p.about__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet.<br><br>Eget malesuada ac aliquam id bibendum non ornare ante. Vel lacus, ullamcorper commodo neque commodo dui turpis nisl. Gravida quis mauris in sed aliquet at. Duis nibh et id quis ultrices nulla at. Nec hendrerit eu, in lectus egestas ullamcorper ac. Viverra integer dignissim commodo vitae suspendisse interdum porttitor volutpat scelerisque.
+                        .about__images 
+                            img(src="images/about-1.png", alt="").about__img.big
+                            img(src="images/about-2.png", alt="").about__img.small
+                include components/social.pug 
+                +social
+            include components/footer.pug 
+            +footer
+        script(src="scripts/index.js") 

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="fonts/stylesheet.css")
+        link(rel="stylesheet" href="styles/index.css")
+    body 
+        .wrapper
+            include components/header.pug 
+            +header
+            main.main
+                .breadcrumb.container
+                    a(href="index.html").breadcrumb-item Главная
+                    .breadcrumb-dot 
+                    a(href="news.html").breadcrumb-item Новости
+                    .breadcrumb-dot 
+                    a(href="#!").breadcrumb-item.active Наши волонтеры в Киеве в приюте «Хвостатый друг», 12.12.2021
+                .new
+                    .new-body.container 
+                        .new-content 
+                            p.new-title Наши волонтеsd  ры в Киеве в приюте «Хвостатый друг», 12.12.2021
+                            p.new-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit at aenean auctor risus sed diam aliquet. Non viverra sed non sed in. Turpis ornare in eget amet magna nunc. Penatibus gravida neque at volutpat eu at. <br>Arcu sed tincidunt maecenas arcu sed. Posuere tempus maecenas facilisis fringilla eu. A neque dolor pellentesque et proin sollicitudin nullam ultricies. Tincidunt massa eu lectus cras malesuada nisi. Et facilisis pulvinar a integer nulla. Velit sit facilisis mauris turpis dui cursus elit tempor. Sit cursus eget non nunc pretium. Tristique sed magna consequat tellus nunc. Viverra aenean lobortis vestibulum tristique aliquet pellentesque in aliquam imperdiet. Nascetur libero varius purus pellentesque vel vel. Ut platea odio in sagittis, commodo pellentesque at sed. <br>Lectus eget nullam nullam lectus condimentum integer elit tincidunt interdum. Faucibus cursus elementum leo interdum tristique hendrerit adipiscing morbi placerat. Vehicula amet mauris tincidunt eu aliquam volutpat. In est magna sed ac suspendisse pharetra. Neque, turpis commodo sed et vehicula egestas ultrices placerat mattis. Dignissim maecenas fusce nisl enim. Amet nec tortor lacus in gravida porta eu volutpat. Montes, amet suspendisse justo, scelerisque blandit leo sed nisl consequat. Volutpat volutpat rutrum nec lectus massa elit facilisis. Lorem iaculis viverra lorem tincidunt blandit amet, proin massa. Eu sapien tellus senectus euismod at nam diam non. Vitae aliquam, nulla in interdum proin gravida nunc.
+                        .new-img
+                            img(src="images/new-img.png", alt="" draggable="false") 
+                include components/social.pug 
+                +social
+            include components/footer.pug 
+            +footer
+        script(src="scripts/index.js") 

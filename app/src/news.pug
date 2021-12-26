@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="fonts/stylesheet.css")
+        link(rel="stylesheet" href="styles/index.css")
+    body 
+        .wrapper
+            include components/header.pug 
+            +header
+            main.mainmain.main
+                .breadcrumb.container
+                    a(href="index.html").breadcrumb-item Главная
+                    .breadcrumb-dot 
+                    a(href="#!").breadcrumb-item.active Новости
+                .new.news 
+                    .news__body.container
+                        h3.news__title.title Новости
+                        .news__item     
+                            img(src="images/news-1.png", alt="").news__item-img
+                            .news__item-content 
+                                p.news__item-title Наши волонтеры в Киеве в приюте «Хвостатый друг», 12.12.2021
+                                p.news__item-p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. 
+                                a(href="new.html").btn-primary_2.news__item-btn Читать полностью новость 
+                        .news__item     
+                            img(src="images/news-2.png", alt="").news__item-img
+                            .news__item-content 
+                                p.news__item-title Наши волонтеры в Одессе в приюте «Солнышко», 12.10.2021
+                                p.news__item-p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. 
+                                a(href="new.html").btn-primary_2.news__item-btn Читать полностью новость 
+                        .news__item     
+                            img(src="images/news-3.png", alt="").news__item-img
+                            .news__item-content 
+                                p.news__item-title Наши волонтеры в Харькове в приюте «Добрый друг», 09.09.2021
+                                p.news__item-p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. 
+                                a(href="new.html").btn-primary_2.news__item-btn Читать полностью новость 
+                include components/social.pug 
+                +social
+            include components/footer.pug 
+            +footer
+        script(src="scripts/index.js") 

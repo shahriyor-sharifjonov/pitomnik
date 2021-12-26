@@ -1,0 +1,30 @@
+mixin footer()
+    footer.footer 
+        .footer__nav.container 
+            .footer__left
+                a(href="#!").footer__logo
+                    img(src="images/logo.svg", alt="") 
+                .footer__menus
+                    .footer__menu
+                        a(href="#!").footer__link Главная
+                        .header__dot
+                        a(href="#!").footer__link Мы помогаем
+                        .header__dot
+                        a(href="#!").footer__link О нас
+                    .footer__menu
+                        a(href="#!").footer__link Партнеры
+                        .header__dot
+                        a(href="#!").footer__link Новости
+                        .header__dot
+                        a(href="#!").footer__link Соцсети
+            form(action="#!").footer__form    
+                p.footer__form-title Обратная связь
+                .footer__form-row 
+                    input(type="text" placeholder="Как к Вам обращаться *" required).footer__form-input.sm
+                    input(type="text" placeholder="Ваш номер телефона *" required).footer__form-input.sm
+                input(type="text" placeholder="Ваше сообщение").footer__form-input.bg
+                .footer__form-btns
+                    .footer__form-chk
+                        input(type="checkbox" id="chk" required).footer__form-checkbox
+                        label(for="chk").footer__form-chk-label Согласен на обработку персональных данных
+                    button(type='submit').btn-primary Отправить
