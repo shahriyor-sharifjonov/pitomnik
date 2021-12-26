@@ -311,6 +311,100 @@ a {
     }
 }
 
+.progress{
+    &__must{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px;
+        color: #333333;
+        margin-bottom: 35px;
+        @include media(576){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;  
+            margin-bottom: 20px; 
+            font-size: 18px;
+            line-height: 26px;
+        }
+        span{
+            font-family: 'Futura PT';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 56px;
+            color: #4E697C;
+            margin-left: 48px;
+            @include media(576){
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 36px;
+                line-height: 36px;
+            }
+        }
+    }
+    &__have{
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px; 
+        color: #333333;
+        margin-bottom: 25px;
+        @include media(576){
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 10px;
+        }
+    }
+    &__item{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background: #EEEEEF;
+        position: relative;
+        margin-bottom: 70px;
+        @include media(576){
+            margin-bottom: 35px;
+        }
+        p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #666666;
+            transform: translate(-50%, -50%);
+            font-family: 'Futura PT';
+            font-style: normal;
+            font-weight: 450;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        &-track{
+            height: 100%;
+            background: #E4BD94;
+            border-radius: 50px 0 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: url('../images/progress.png') center / contain no-repeat;
+                width: 16px;
+                height: 100%;
+            }
+        }
+    }
+    &__btn{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 .news{
     &__item{

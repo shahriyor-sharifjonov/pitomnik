@@ -11,7 +11,7 @@ html(lang="en")
         .wrapper
             include components/header.pug 
             +header
-            main.mainmain.mainmain.main
+            main.main
                 .breadcrumb.container
                     a(href="index.html").breadcrumb-item Главная
                     .breadcrumb-dot 
@@ -22,8 +22,21 @@ html(lang="en")
                             h2.about__title.title О нас 
                             p.about__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet.<br><br>Eget malesuada ac aliquam id bibendum non ornare ante. Vel lacus, ullamcorper commodo neque commodo dui turpis nisl. Gravida quis mauris in sed aliquet at. Duis nibh et id quis ultrices nulla at. Nec hendrerit eu, in lectus egestas ullamcorper ac. Viverra integer dignissim commodo vitae suspendisse interdum porttitor volutpat scelerisque.
                         .about__images 
-                            img(src="images/about-1.png", alt="").about__img.big
-                            img(src="images/about-2.png", alt="").about__img.small
+                            img(src="images/about-1.png", alt="" draggable="false").about__img.big
+                            img(src="images/about-2.png", alt="" draggable="false").about__img.small
+                    .social.section#socials
+                .section__header   
+                    .container
+                        h3.section__title Сумма сбора
+                .section__body.progress
+                    .section__inner.container.progress__body    
+                        .progress__must Сумма для сбора: 
+                            span 100 000 грн
+                        p.progress__have Уже собрано:
+                        .progress__item 
+                            .progress__item-track(style="width: 34.488%") 
+                            p 34 488 грн
+                        a(href="#!").btn-secondary_2.progress__btn Сделать пожертвование
                 include components/social.pug 
                 +social
             include components/footer.pug 
