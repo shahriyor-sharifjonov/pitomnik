@@ -12,6 +12,18 @@ html(lang="en")
             include components/header.pug 
             +header
             main.main
+                .section__header   
+                    .container
+                        h3.section__title О нас
+                .section__body
+                    .section__inner
+                        .about__body.container
+                            .about__content
+                                p.about__p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim nulla maecenas id mauris blandit dignissim massa magna. Scelerisque arcu vestibulum, id tincidunt turpis nibh diam. Neque, faucibus vitae, sed purus enim laoreet. Proin ipsum integer diam ut sagittis quis auctor amet.<br><br>Eget malesuada ac aliquam id bibendum non ornare ante. Vel lacus, ullamcorper commodo neque commodo dui turpis nisl. Gravida quis mauris in sed aliquet at. Duis nibh et id quis ultrices nulla at. Nec hendrerit eu, in lectus egestas ullamcorper ac. Viverra integer dignissim commodo vitae suspendisse interdum porttitor volutpat scelerisque.
+                                a(href="about.html").btn-primary_2.about__btn Больше информации о нас 
+                            .about__images 
+                                img(src="images/about-1.png", alt="" draggable="false").about__img.big
+                                img(src="images/about-2.png", alt="" draggable="false").about__img.small
                 include components/social.pug 
                 +social
             include components/footer.pug 

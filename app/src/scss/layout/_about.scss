@@ -53,4 +53,10 @@
             }
         }
     }
+    &__btn{
+        margin-top: 50px;
+        @include media(1200){
+            margin-top: 25px;
+        }
+    }
 }
