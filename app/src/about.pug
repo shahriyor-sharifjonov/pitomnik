@@ -5,6 +5,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Document
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="fonts/stylesheet.css")
         link(rel="stylesheet" href="styles/index.css")
     body 
@@ -37,8 +38,38 @@ html(lang="en")
                             .progress__item-track(style="width: 34.488%") 
                             p 34 488 грн
                         a(href="#!").btn-secondary_2.progress__btn Сделать пожертвование
+                .section__header   
+                    .container
+                        h3.section__title Фотогалерея
+                .section__body.gallery
+                    .container
+                        .swiper.gallery__swiper
+                            .swiper-wrapper.gallery__wrapper 
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-1.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-2.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-3.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-4.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-1.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-2.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-3.png", alt="")
+                                .swiper-slide.gallery__slide 
+                                    img(src="images/gallery-4.png", alt="")
+                            .swiper-btns
+                                .gallery-button-prev.swiper-button-prev
+                                .gallery-pagination.swiper-pagination
+                                .gallery-button-next.swiper-button-next
+
                 include components/social.pug 
                 +social
             include components/footer.pug 
             +footer
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+        script(src="scripts/about.js") 
         script(src="scripts/index.js") 
