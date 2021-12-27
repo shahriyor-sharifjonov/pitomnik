@@ -5,6 +5,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Document
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel="stylesheet", href="fonts/stylesheet.css")
         link(rel="stylesheet" href="styles/index.css")
     body 
@@ -12,6 +13,60 @@ html(lang="en")
             include components/header.pug 
             +header
             main.main
+                .intro 
+                    .intro__body.container 
+                        .intro__content     
+                            p.intro__subtitle Надзаголовок
+                            p.intro__title Заголовок
+                            p.intro__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed ipsum ultrices augue scelerisque proin nunc.
+                            button(type="button" onclick="openPopup()").btn-primary_2 Сделать пожертвование
+                        .intro__imgs 
+                            img(src="images/intro-1.png", alt="").intro__img.small 
+                            img(src="images/intro-2.png", alt="").intro__img.big
+                .section__header   
+                    .container
+                        h3.section__title Мы помогаем
+                .section__body.gallery
+                    .container
+                        .swiper.help__swiper
+                            .swiper-wrapper.gallery__wrapper 
+                                .swiper-slide.help__slide 
+                                    img(src="images/help-1.png", alt="")
+                                    p.help__slide-title Приют «Джага»
+                                    p.help__slide-location Украина, г. Харьков
+                                    .help__slide-must 
+                                        span Сумма для сбора:
+                                        p 100 000 грн
+                                    .help__slide-have 
+                                        span Уже собрано:
+                                        p 34 488 грн
+                                    button(type="button" onclick="openPopup()").btn-primary_2 Сделать пожертвование 
+                                .swiper-slide.help__slide 
+                                    img(src="images/help-1.png", alt="")
+                                    p.help__slide-title Приют «Аврора»
+                                    p.help__slide-location Украина, г. Днепр
+                                    .help__slide-must 
+                                        span Сумма для сбора:
+                                        p 255 000 грн
+                                    .help__slide-have 
+                                        span Уже собрано:
+                                        p 12 488 грн
+                                    button(type="button" onclick="openPopup()").btn-primary_2 Сделать пожертвование 
+                                .swiper-slide.help__slide 
+                                    img(src="images/help-1.png", alt="")
+                                    p.help__slide-title Приют «Дюссельдорф» 
+                                    p.help__slide-location Украина, г. Одесса 
+                                    .help__slide-must 
+                                        span Сумма для сбора:
+                                        p 120 000 грн
+                                    .help__slide-have 
+                                        span Уже собрано:
+                                        p 89 488 грн
+                                    button(type="button" onclick="openPopup()").btn-primary_2 Сделать пожертвование 
+                            .swiper-btns.help-pagination
+                                .gallery-button-prev.swiper-button-prev
+                                .gallery-pagination.swiper-pagination
+                                .gallery-button-next.swiper-button-next
                 .section__header   
                     .container
                         h3.section__title О нас
@@ -24,8 +79,39 @@ html(lang="en")
                             .about__images 
                                 img(src="images/about-1.png", alt="" draggable="false").about__img.big
                                 img(src="images/about-2.png", alt="" draggable="false").about__img.small
+                .section__header   
+                    .container
+                        h3.section__title Фотогалерея
+                .section__body.gallery
+                    .container
+                        .swiper.gallery__swiper
+                            .swiper-wrapper.gallery__wrapper 
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                                .swiper-slide.partner__slide 
+                                    img(src="images/partner-1.png", alt="")
+                            .swiper-btns
+                                .gallery-button-prev.swiper-button-prev
+                                .gallery-pagination.swiper-pagination
+                                .gallery-button-next.swiper-button-next
                 include components/social.pug 
                 +social
             include components/footer.pug 
             +footer
+            include components/popup.pug 
+            +popup
+        script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+        script(src="scripts/about.js") 
         script(src="scripts/index.js") 

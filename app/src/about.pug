@@ -36,7 +36,7 @@ html(lang="en")
                         .progress__item 
                             .progress__item-track(style="width: 34.488%") 
                             p 34 488 грн
-                        a(href="#!").btn-secondary_2.progress__btn Сделать пожертвование
+                        button(type="button" onclick="openPopup()").btn-secondary_2.progress__btn Сделать пожертвование
                 .section__header   
                     .container
                         h3.section__title Фотогалерея
@@ -99,6 +99,8 @@ html(lang="en")
                 +social
             include components/footer.pug 
             +footer
+            include components/popup.pug 
+            +popup
         script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
         script(src="scripts/about.js") 
         script(src="scripts/index.js") 
