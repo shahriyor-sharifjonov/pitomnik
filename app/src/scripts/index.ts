@@ -21,6 +21,18 @@ window.onclick = (e: MouseEvent) => {
 
 window.addEventListener("click", function (e) {
     if(e.target.classList.contains('header__link')){
-        menuToggle()
+      menuToggle()
+    }
+    if(e.target.classList.contains('popup__close')){
+      console.log('yes');
+      
+      const popups = document.querySelectorAll('.popup');
+      popups.forEach(el => {
+        el.classList.remove('active')
+      });
     }
 });
+
+function openPopup(){
+  document.querySelector('.popup').classList.add('active');
+}

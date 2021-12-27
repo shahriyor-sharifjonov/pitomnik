@@ -1,2 +1,48 @@
 mixin popup()
-    .popup 
+    .popup.active.popup__close 
+        .popup__body 
+            .popup__content
+                .popup__inner 
+                    .popup__header
+                        p.popup__title Пожертвование
+                        button(type="button").popup__close.popup__close-btn
+                            img(src="images/button_close.svg", alt="").popup__close
+                    .popup__row
+                        .popup__left 
+                            p.popup__left-title Приют «Джага»
+                            .popup__left-must 
+                                span Сумма для сбора:
+                                p 100 000 грн
+                            .popup__left-have
+                                span Уже собрано:
+                                p 34 488 грн
+                            form(action="#!").popup__form
+                                label(for="sum").popup__cart-label Ваше пожертвование:
+                                input(type="text" id="sum" placeholder="100 грн")
+                                button(type="submit").popup__form-btn.btn-secondary_2 Сделать пожертвование
+                        .popup__cart
+                            .popup__cart-logo
+                                <svg width="120" height="37" viewBox="0 0 120 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.0484 0.614899L41.9497 36.4632H51.7034L57.8068 0.614899H48.0484Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.7727 0.654892L24.2197 25.1016L23.1997 21.4123C21.3156 16.9637 15.9677 10.576 9.68958 6.55077L18.4233 36.4464L28.7436 36.4275L44.1049 0.647797L33.7727 0.654892Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4979 3.22107C18.9312 1.0382 17.2879 0.387828 15.2479 0.309784H0.125138L0 1.02164C11.7677 3.88089 19.5546 10.7724 22.7869 19.0569L19.4979 3.22107Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M77.5758 7.4875C80.7657 7.43784 83.0795 8.13551 84.8763 8.85919L85.757 9.27542L87.0769 1.50412C85.1431 0.778076 82.1162 0 78.3385 0C68.7005 0 61.9076 4.86238 61.8533 11.8296C61.7919 16.9781 66.6935 19.8539 70.3957 21.5686C74.1971 23.3281 75.4697 24.4467 75.4532 26.0171C75.4225 28.4175 72.4239 29.5172 69.6213 29.5172C65.7137 29.5172 63.6407 28.978 60.4367 27.6418L59.1806 27.0671L57.8064 35.0915C60.0896 36.0942 64.3018 36.9551 68.6745 37C78.9287 37 85.5917 32.1967 85.6602 24.7518C85.7027 20.677 83.1031 17.5694 77.4649 15.0199C74.0531 13.355 71.9659 12.2506 71.9871 10.5714C71.9871 9.0815 73.7579 7.4875 77.5758 7.4875Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M104.57 0.655151H112.107L120 36.4821H110.95C110.95 36.4821 110.053 32.3647 109.763 31.1136C109.012 31.1136 105.871 31.1089 102.913 31.1042C100.283 31.1018 97.7989 31.0994 97.27 31.0994C96.8922 32.0667 95.2206 36.4821 95.2206 36.4821H84.9781L99.4611 3.63029C100.491 1.29369 102.231 0.655151 104.57 0.655151ZM103.964 13.7428C103.964 13.7428 100.88 21.7033 100.077 23.7608H108.181L105.921 13.4117L105.265 10.3207C105.017 10.9805 104.689 11.8366 104.422 12.5272C104.146 13.2509 103.938 13.7925 103.964 13.7428Z" fill="white"/>
+                                </svg>
+                            form(action="#!").popup__cart-form
+                                .popup__cart-item
+                                    label(for="name").popup__cart-label Имя и фамилия вледельца карты:
+                                    input(type="text" placeholder="IVAN IVANOV" id="name").popup__cart-input
+                                .popup__cart-item
+                                    label(for="num").popup__cart-label Номер карты:
+                                    input(type="text" placeholder="IVAN IVANOV" id="num").popup__cart-input
+                                .popup__cart-row 
+                                    .popup__cart-col
+                                        label(for="year").popup__cart-label Месяц/год:
+                                        input(type="text" placeholder="11 / 2024" id="year").popup__cart-input
+                                    .popup__cart-col
+                                        label(for="CVV").popup__cart-label CVV:
+                                        input(type="text" placeholder="123" id="CVV").popup__cart-input
+                                button(type="submit").popup__cart-btn.btn-secondary_2 Сделать пожертвование
+
+                    img(src="images/popup.png", alt="").popup__img
